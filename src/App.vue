@@ -4,7 +4,7 @@
       <div class="flex h-16 items-center justify-between">
         <div class="md:flex md:items-center md:gap-12">
           <a class=" block text-teal-600" href="#">
-            <img src="@/assets/chlorophyl.png"  alt="Logo" class="logo " />
+            <img src="@/assets/Jnina.png"  alt="Logo" class="logo " />
           </a>
         </div>
   
@@ -80,7 +80,7 @@
   background-color: rgb(255, 255, 255);
 }
 .bg-btn{
-  background-color: #10B982;
+  background-color: #91D143;
 
 }
 
