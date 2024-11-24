@@ -1,3 +1,5 @@
+const { getActiveResourcesInfo } = require('process');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,7 +7,12 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'green': '#10B982',
+        'dark-green': '#0d8f65',
+      },
+    },
   },
   plugins: [],
 }
