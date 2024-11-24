@@ -30,14 +30,14 @@
         <div class="mt-8 flex flex-wrap gap-4 text-center">
           <a
             href="#"
-            class="block w-full rounded bg-green px-12 py-3 text-sm font-medium text-white shadow hover:bg-green-800 focus:outline-none focus:ring active:bg-green-800 sm:w-auto"
+            class="block w-full rounded bg-green px-12 py-3 text-sm font-medium text-white shadow hover:bg-dark-green focus:outline-none focus:ring active:bg-dark-green sm:w-auto"
           >
             Get Started
           </a>
   
           <a
             href="#"
-            class="block w-full rounded bg-white px-12 py-3 text-sm font-medium green shadow hover:text-green-800 focus:outline-none focus:ring active:text-green-800 sm:w-auto"
+            class="block w-full rounded bg-white px-12 py-3 text-sm font-medium green shadow hover:text-dark-green focus:outline-none focus:ring active:text-dark-green sm:w-auto"
           >
             Learn More
           </a>
@@ -49,6 +49,9 @@
 <style scoped>
 .green {
   color: #10b981;
+}
+.dark-green {
+  color: #047857;
 }
 </style>
 
