@@ -45,7 +45,7 @@
       </div>
     </div>
   </section>
-  <Grid3Produits></Grid3Produits>
+  <GridProduits></GridProduits>
 
 </template>
 
@@ -59,12 +59,16 @@
 </style>
 
 <script>
-  import Grid3Produits from '@/components/Grid3Produits.vue';
+  import GridProduits from '@/components/GridProduits.vue';
   export default {
     name: "HomeView",
     components: {
-      Grid3Produits,
+      GridProduits,
     },
+            data() {
+                return {
+                }
+            }
   };
 
 </script>
