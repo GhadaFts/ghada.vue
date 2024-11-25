@@ -22,9 +22,8 @@
           <strong class="block font-extrabold green"> FAVORITE PLANT. </strong>
         </h1>
   
-        <p class="mt-4 max-w-lg text-white sm:text-xl/relaxed">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-          numquam ea!
+        <p class="mt-4 max-w-lg text-white text-sm text-left">
+          CHLOROPHYL vous ouvre les portes d’un monde végétal tendance et moderne. Simples à mettre en place et faciles à moduler selon vos envies, nos pots en résine apportent un vrai plus à votre décoration intérieure ou extérieure. Vous trouverez dans cette sélection de nombreux pots de fleurs disponibles en différentes tailles et couleurs, aussi pratiques que décoratifs.
         </p>
   
         <div class="mt-8 flex flex-wrap gap-4 text-center">

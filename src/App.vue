@@ -35,7 +35,7 @@
         <div class="flex items-center gap-4">
           <div class="sm:flex sm:gap-4">
             <a
-              class="bg-btn rounded-md  px-5 py-2.5 text-sm font-medium text-white shadow"
+              class="bg-btn rounded-md   px-5 py-2.5 text-sm font-medium text-white shadow"
               href="#"
             >
               Login
@@ -43,7 +43,7 @@
   
             <div class="hidden sm:flex">
               <a
-                class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
+                class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium "
                 href="#"
               >
                 Register
@@ -178,22 +178,27 @@
 
 .logo{
   height:50px;
-
+}
+.green{
+  color: #10B982;
 }
 .bg{
   background-color: rgb(255, 255, 255);
 }
 .bg-btn{
-  background-color: #91D143;
-
+  background-color: #10B982;
 }
+.bg-btn:hover{
+  background-color: #047857;
+}
+
 .items{
   font-size: medium;
   margin-right: 20px;
 }
 .items:hover{
   font-size: large;
-  border-bottom: #91D143 1px solid;
+  border-bottom: #10B982 1px solid;
 }
 
 </style>
