@@ -12,19 +12,19 @@
           <nav aria-label="Global">
             <ul class="flex items-center gap-6 text-sm">
               <li>
-                    <router-link to="/" class="items text-gray-500 transition hover:text-gray-500/75">Home</router-link> 
+                    <router-link to="/" class="items text-gray-500 transition hover:text-green">Home</router-link> 
 
               </li>
   
               <li>
-                    <router-link to="/about" class="items text-gray-500 transition hover:text-gray-500/75"> Product</router-link> 
+                    <router-link to="/about" class="items text-gray-500 transition hover:text-green"> Product</router-link> 
               </li>
   
               <li>
-                    <router-link to="/product" class="items text-gray-500 transition hover:text-gray-500/75"> Team</router-link> 
+                    <router-link to="/product" class="items text-gray-500 transition hover:text-green"> Team</router-link> 
               </li>
               <li>
-                    <router-link to="/product" class="items text-gray-500 transition hover:text-gray-500/75"> Contact</router-link> 
+                    <router-link to="/product" class="items text-gray-500 transition hover:text-green"> Contact</router-link> 
               </li>
   
               

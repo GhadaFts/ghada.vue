@@ -10,7 +10,7 @@ module.exports = {
         "dark-green": "#0d8f65",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/peakpx.jpg')",
+        "hero-pattern": "url('/src/assets/peakpxe.jpg')",
       },
     },
   },
