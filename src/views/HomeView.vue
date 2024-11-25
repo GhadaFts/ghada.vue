@@ -45,7 +45,10 @@
       </div>
     </div>
   </section>
+  <Grid3Produits></Grid3Produits>
+
 </template>
+
 <style scoped>
 .green {
   color: #10b981;
@@ -56,5 +59,12 @@
 </style>
 
 <script>
+  import Grid3Produits from '@/components/Grid3Produits.vue';
+  export default {
+    name: "HomeView",
+    components: {
+      Grid3Produits,
+    },
+  };
 
 </script>
