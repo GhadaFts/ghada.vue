@@ -76,9 +76,9 @@
         <img class="logo" src="@/assets/Jnina.png" alt="">
       </div>
       <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-        Chlorophyl votre partenaire pour un mode de vie plus vert! Explorez notre collection unique de plantes adaptées à tous les espaces et tous les niveaux de soin.
+        CHROLOPHYL your partner for a greener lifestyle! Explore our unique collection of plants suitable for all spaces and all levels of care.
         <br>
-        Trouvez la plante parfaite pour créer une ambiance naturelle et apaisante chez vous.
+        Find the perfect plant to create a natural and soothing atmosphere at home.
       </p>
   
       <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
