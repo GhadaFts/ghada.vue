@@ -12,19 +12,19 @@
           <nav aria-label="Global">
             <ul class="flex items-center gap-6 text-sm">
               <li>
-                    <router-link to="/" class="items text-gray-500 transition hover:text-gray-500/75">Home</router-link> 
+                    <router-link to="/" class="items text-gray-500 transition hover:text-green">Home</router-link> 
 
               </li>
   
               <li>
-                    <router-link to="/about" class="items text-gray-500 transition hover:text-gray-500/75"> Product</router-link> 
+                    <router-link to="/about" class="items text-gray-500 transition hover:text-green"> Product</router-link> 
               </li>
   
               <li>
-                    <router-link to="/product" class="items text-gray-500 transition hover:text-gray-500/75"> Team</router-link> 
+                    <router-link to="/product" class="items text-gray-500 transition hover:text-green"> Team</router-link> 
               </li>
               <li>
-                    <router-link to="/product" class="items text-gray-500 transition hover:text-gray-500/75"> Contact</router-link> 
+                    <router-link to="/product" class="items text-gray-500 transition hover:text-green"> Contact</router-link> 
               </li>
   
               
@@ -35,7 +35,7 @@
         <div class="flex items-center gap-4">
           <div class="sm:flex sm:gap-4">
             <a
-              class="bg-btn rounded-md  px-5 py-2.5 text-sm font-medium text-white shadow"
+              class="bg-btn rounded-md   px-5 py-2.5 text-sm font-medium text-white shadow"
               href="#"
             >
               Login
@@ -43,7 +43,7 @@
   
             <div class="hidden sm:flex">
               <a
-                class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
+                class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium "
                 href="#"
               >
                 Register
@@ -76,9 +76,9 @@
         <img class="logo" src="@/assets/Jnina.png" alt="">
       </div>
       <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-        Chlorophyl votre partenaire pour un mode de vie plus vert! Explorez notre collection unique de plantes adaptées à tous les espaces et tous les niveaux de soin.
+        CHROLOPHYL your partner for a greener lifestyle! Explore our unique collection of plants suitable for all spaces and all levels of care.
         <br>
-        Trouvez la plante parfaite pour créer une ambiance naturelle et apaisante chez vous.
+        Find the perfect plant to create a natural and soothing atmosphere at home.
       </p>
   
       <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
@@ -178,22 +178,27 @@
 
 .logo{
   height:50px;
-
+}
+.green{
+  color: #10B982;
 }
 .bg{
   background-color: rgb(255, 255, 255);
 }
 .bg-btn{
-  background-color: #91D143;
-
+  background-color: #10B982;
 }
+.bg-btn:hover{
+  background-color: #047857;
+}
+
 .items{
   font-size: medium;
   margin-right: 20px;
 }
 .items:hover{
   font-size: large;
-  border-bottom: #91D143 1px solid;
+  border-bottom: #10B982 1px solid;
 }
 
 </style>
