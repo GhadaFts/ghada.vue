@@ -17,7 +17,7 @@
     >
       <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
         <h1 class="text-3xl font-extrabold text-white sm:text-5xl">
-          Let us find your
+          Let us  your
   
           <strong class="block font-extrabold green"> FAVORITE PLANT. </strong>
         </h1>
