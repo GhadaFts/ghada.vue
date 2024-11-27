@@ -4,9 +4,9 @@
       <a>
         <img :src="event.poster" alt="Event Poster" />
       </a>
-      <div class="px-4 py-3">
+      <div class="px-4 py-3 flex flex-col items-center justify-center">
         <span class="text-gray-400 uppercase text-sm">{{ event.title }}</span>
-        <p class="text-lg font-bold block truncate capitalize">Ma7bes</p>
+        <p class="text-lg  font-bold block truncate capitalize">Ma7bes</p>
         <del>
           <p class="text-sm text-gray-600 ml-2">20Dt</p>
         </del>
