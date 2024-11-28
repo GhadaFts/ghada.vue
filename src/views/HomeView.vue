@@ -56,17 +56,6 @@
   color: #047857;
 }
 </style>
-
 <script>
-  import BestProducts from '@/components/BestProducts.vue';
-  export default {
-    name: "HomeView",
-    components: {
-      BestProducts,
-    },
-    data() {
-      return {}
-    }
-  };
 
 </script>
