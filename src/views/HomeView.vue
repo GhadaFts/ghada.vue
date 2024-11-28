@@ -57,5 +57,12 @@
 }
 </style>
 <script>
+import BestProducts from '@/components/BestProducts.vue'
+export default {
+  name: 'HomeView',
+  components: {
+    BestProducts,
+  }
+} 
 
 </script>

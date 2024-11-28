@@ -1,10 +1,10 @@
 <template>
-    <section class=" bg-white py-12">
+    <section class=" bg-white py-12" v-if="product">
         <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                     <img 
-                        :src="product.image" 
+                        :src="require(`@/assets/images/${product.image1}`)" 
                         alt="Product Image" 
                         class=" mx-10 w-96 h-auto object-contain rounded-lg shadow-lg"
                     />
@@ -14,7 +14,7 @@
                     <p class="mt-4 text-lg text-gray-700">
                         Découvrez ce produit de qualité exceptionnelle conçu pour améliorer votre quotidien. Fabriqué avec soin, il combine style et fonctionnalité.
                     </p>
-                    <p class="mt-6 text-2xl font-semibold text-green-600">{{ this.product.prix }}</p>
+                    <p class="mt-6 text-2xl font-semibold text-green-600">{{ product.prix }}</p>
                     <div class="mt-6 flex items-center gap-4">
                         <button 
                         class="rounded-md bg-green-600 px-6 py-3 text-black text-sm font-medium hover:bg-green-700 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
@@ -49,8 +49,8 @@
     export default {
         props: ['id'],
         data() {
-            return{
-                product: {}
+            return {
+                product: null
             }
         },
         created(){
