@@ -16,7 +16,7 @@
             </li>
 
             <li>
-              <router-link to="/about" class="items text-gray-500 hover:text-green transition-all">Product</router-link>
+              <router-link to="/products" class="items text-gray-500 hover:text-green transition-all">Product</router-link>
             </li>
 
             <li>

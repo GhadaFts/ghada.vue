@@ -1,5 +1,5 @@
 <template>
-    <GridProduits :nombre-produits="3" :msg="'Best products'"></GridProduits>
+    <GridProduits :nombreProduits="3" :msg="'Best products'"></GridProduits>
 </template>
 
 
