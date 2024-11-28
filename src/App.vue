@@ -1,78 +1,61 @@
 <template>
-  <header class="bg">
-    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-      <div class="flex h-16 items-center justify-between">
-        <div class="md:flex md:items-center md:gap-12">
-          <a class=" block text-teal-600" href="#">
-            <img src="@/assets/Jnina.png"  alt="Logo" class="logo " />
-          </a>
-        </div>
-  
-        <div class="hidden md:block">
-          <nav aria-label="Global">
-            <ul class="flex items-center gap-6 text-sm">
-              <li>
-                    <router-link to="/" class="items text-gray-500 transition hover:text-green">Home</router-link> 
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <div class="md:flex md:items-center md:gap-12">
+        <router-link class="block" to="/">
+          <img src="@/assets/Jnina.png" alt="Logo" class="logo" />
+        </router-link>
+      </div>
 
-              </li>
-  
-              <li>
-                    <router-link to="/about" class="items text-gray-500 transition hover:text-green"> Product</router-link> 
-              </li>
-  
-              <li>
-                    <router-link to="/product" class="items text-gray-500 transition hover:text-green"> Team</router-link> 
-              </li>
-              <li>
-                    <router-link to="/product" class="items text-gray-500 transition hover:text-green"> Contact</router-link> 
-              </li>
-  
-              
-            </ul>
-          </nav>
-        </div>
-  
-        <div class="flex items-center gap-4">
-          <div class="sm:flex sm:gap-4">
-            <a
-              class="bg-btn rounded-md   px-5 py-2.5 text-sm font-medium text-white shadow"
-              href="#"
+      <div class="md:block">
+        <nav aria-label="Global">
+          <ul class="flex items-center gap-6 text-sm">
+            <li>
+              <router-link to="/" class="items text-gray-500 hover:text-green transition-all">Home</router-link>
+            </li>
+
+            <li>
+              <router-link to="/about" class="items text-gray-500 hover:text-green transition-all">Product</router-link>
+            </li>
+
+            <li>
+              <router-link to="/products" class="items text-gray-500 hover:text-green transition-all">Team</router-link>
+            </li>
+            
+            <li>
+              <router-link to="/product" class="items text-gray-500 hover:text-green transition-all">Contact</router-link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-4">
+        
+
+        <div class="block md:hidden">
+          <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
             >
-              Login
-            </a>
-  
-            <div class="hidden sm:flex">
-              <a
-                class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium "
-                href="#"
-              >
-                Register
-              </a>
-            </div>
-          </div>
-  
-          <div class="block md:hidden">
-            <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
+
   <router-view />
   <footer class="bg-gray-100">
     <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-      <div class="flex justify-center text-teal-600">
+      <div class="flex justify-center">
         <img class="logo" src="@/assets/Jnina.png" alt="">
       </div>
       <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
@@ -175,6 +158,9 @@
 </template>
 
 <style>
+*{
+  font-family: 'Poppins', sans-serif;
+}
 
 .logo{
   height:50px;

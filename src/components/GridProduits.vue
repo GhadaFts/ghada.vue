@@ -1,56 +1,62 @@
 <template>
     <div class="mx-10 my-24">
-      <h1 class="text-5xl text-center my-8 text-green">Best Produits</h1>
+      <h1 class="text-5xl text-center my-8 text-green">{{ msg }}</h1>
       <div class="grid grid-cols-1 gap-4  lg:grid-cols-3 lg:gap-8">
-        <CardsProduits :nombreProduit="3"/>
+        <CardsProduits :produits="filteredProduits"/>
       </div>
     </div>
   </template>
   
   <script>
   import CardsProduits from './CardsProduits.vue';
-  
+  import ProduitService from '@/services/ProduitService.js';  
   export default {
-    name: "Grid3Produits",
+    name: "GridProduits",
     components: {
       CardsProduits,
     },
+    props: {
+      msg: {
+        type: String,
+        default: 'Nos Produits'
+      },
+      nombreProduits:{
+        type: Number,
+      },
+      categories:{
+        type:String,
+        default: 'All'
+      },
+        
+    },
     data() {
       return {
-        events: [
-          {
-            id: 13,
-            title: "Cat Adoption Day",
-            poster: "https://tonusol.com/img/cms/Sansevieria-pot.jpg",
-          },
-          {
-            id: 456,
-            title: "Community Gardening",
-            poster: "https://tonusol.com/img/cms/Sansevieria-pot.jpg",
-          },
-          {
-            id: 789,
-            title: "Beach Cleanup",
-            poster: "https://tonusol.com/img/cms/Sansevieria-pot.jpg",
-          },
-          {
-            id: 789,
-            title: "Beach Cleanup",
-            poster: "https://tonusol.com/img/cms/Sansevieria-pot.jpg",
-          },
-          {
-            id: 789,
-            title: "Beach Cleanup",
-            poster: "https://tonusol.com/img/cms/Sansevieria-pot.jpg",
-          },
-          {
-            id: 789,
-            title: "Beach Cleanup",
-            poster: "https://tonusol.com/img/cms/Sansevieria-pot.jpg",
-          },
-        ],
+        Produits: [],
       };
     },
+    created(){
+      try {
+        ProduitService.getProduits()
+        .then(response => {
+          this.Produits = response.data;
+        });
+      } catch (error) {
+        console.log('error:', error);
+      }
+    },
+    computed: {
+      filteredProduits() {
+        if(this.nombreProduits === 3){
+          return this.Produits.slice(0,3);
+        }
+        else if(this.categories === 'All'){
+          return this.Produits;
+        }
+        else{
+          return this.Produits.filter(produit => produit.category === this.categories)
+        }
+      }
+    }
   };
   </script>
   

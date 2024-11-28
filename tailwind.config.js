@@ -1,5 +1,3 @@
-const { getActiveResourcesInfo } = require("process");
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
@@ -11,6 +9,9 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/peakpxe.jpg')",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"], // Ajout de la police Poppins
       },
     },
   },

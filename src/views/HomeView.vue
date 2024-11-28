@@ -44,7 +44,7 @@
       </div>
     </div>
   </section>
-  <GridProduits></GridProduits>
+  <BestProducts :categories="All" ></BestProducts>
 
 </template>
 
@@ -58,16 +58,15 @@
 </style>
 
 <script>
-  import GridProduits from '@/components/GridProduits.vue';
+  import BestProducts from '@/components/BestProducts.vue';
   export default {
     name: "HomeView",
     components: {
-      GridProduits,
+      BestProducts,
     },
-            data() {
-                return {
-                }
-            }
+    data() {
+      return {}
+    }
   };
 
 </script>
