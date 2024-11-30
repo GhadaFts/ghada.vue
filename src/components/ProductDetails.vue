@@ -40,8 +40,8 @@
                         type="number"
                     />
                     <div class="my-4">
-                        <p v-if="product.quantite > 10" class="text-green-600">En Stock</p>
-                        <p v-else-if="product.quantite > 0 && product.quantite <= 10" class="text-yellow-500">
+                        <p v-if="product.quantité > 10" class=" text-green">En Stock</p>
+                        <p v-else-if="product.quantité > 0 && product.quantité <= 10" class="text-yellow-500">
                             Presque épuisé
                         </p>
                         <p v-else class="text-red-500">En Rupture de Stock</p>
