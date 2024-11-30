@@ -12,9 +12,7 @@
       <div class="flex flex-col items-center justify-center my-4">
         <span class="text-gray-500 uppercase text-sm">{{ produit.nom }}</span>
         <p class="text-lg font-bold block truncate capitalize">{{ produit.description1 }}</p>
-        <del>
-          <p class="text-sm text-gray-600 ml-2">{{ produit.prix }} TND</p>
-        </del>
+        <p class="text-sm text-gray-600 ml-2">{{ produit.prix }} TND</p>
       </div>
     </RouterLink>
   </div>
