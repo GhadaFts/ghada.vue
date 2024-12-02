@@ -6,24 +6,16 @@
                 <div class="flex flex-col items-center">
                     <!-- Image principale avec transition -->
                     <div class="relative w-96 h-96">
-                        <img
-                            :key="product.indice"
-                            :src="productImage"
-                            alt="Product Image"
-                            class="w-full h-full object-contain rounded-lg shadow-lg transition-opacity duration-500 ease-in-out opacity-100"
-                        />
+                        <img :key="product.indice" :src="productImage" alt="Product Image"
+                            class="w-full h-full object-contain rounded-lg shadow-lg transition-opacity duration-500 ease-in-out opacity-100" />
                     </div>
 
                     <!-- Miniatures -->
                     <div class="flex mt-6 space-x-4">
-                        <img
-                            v-for="(image, index) in product.images"
-                            :key="index"
-                            :src="require(`@/assets/images/${image}`)"
-                            alt="Miniature"
+                        <img v-for="(image, index) in product.images" :key="index"
+                            :src="require(`@/assets/images/${image}`)" alt="Miniature"
                             class="w-20 h-20 object-contain border border-gray-300 rounded-lg cursor-pointer hover:opacity-80 transition-all duration-300"
-                            @mouseover="changeImage(index)"
-                        />
+                            @mouseover="changeImage(index)" />
                     </div>
                 </div>
 
@@ -40,11 +32,11 @@
                         type="number"
                     />
                     <div class="my-4">
-                        <p v-if="product.quantité > 10" class=" text-green">En Stock</p>
+                        <p v-if="product.quantité > 10" class=" text-green">In Stock</p>
                         <p v-else-if="product.quantité > 0 && product.quantité <= 10" class="text-yellow-500">
-                            Presque épuisé
+                            Almost out of stock
                         </p>
-                        <p v-else class="text-red-500">En Rupture de Stock</p>
+                        <p v-else class="text-red-500">Out of stock</p>
                     </div>
                     <!-- Boutons -->
                     <div class="mt-6 flex items-center gap-4">
@@ -69,6 +61,17 @@
     <div v-else class="text-center py-12">
         <p class="text-lg text-gray-700">Chargement...</p>
     </div>
+    <!--modale-->
+    <!-- Modale -->
+    <div v-if="showModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 class="text-lg font-bold">{{ product.nom }} a été ajouté au panier</h2>
+            <p class="mt-2">Vous pouvez continuer vos achats ou consulter votre panier.</p>
+            <div class="mt-4 flex justify-end gap-4">
+                <button class="bg-green  px-4 py-2 rounded-md" @click="closeModal">Fermer</button>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -84,12 +87,22 @@ export default {
     computed: {
         productImage() {
             if (this.product) {
-                return require(`@/assets/images/${this.product.images[this.product.indice]}`);
+                return require(`@/assets/images/${this.product.images[this.product.indice]}`) || '';
             }
             return "";
         },
+        enStock() {
+            if (!this.product || this.product.quantité <= 0) {
+                return false;
+            }
+            return true;
+        }
     },
     methods: {
+        addToCart() {
+            this.$emit("add-to-cart"); // Notifie App.vue
+            this.showModal = true;
+        },
         changeImage(indice) {
             if (this.product) {
                 this.product.indice = indice;
@@ -110,5 +123,4 @@ export default {
 </script>
 
 <style>
-/* Aucun style personnalisé nécessaire avec Tailwind CSS */
 </style>

@@ -17,3 +17,8 @@
   };
 
 </script>
+<style>
+.image{
+  width: 100%;
+}
+</style>

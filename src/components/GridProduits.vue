@@ -18,7 +18,7 @@
     props: {
       msg: {
         type: String,
-        default: 'Nos Produits'
+        default: 'Our Products'
       },
       nombreProduits:{
         type: Number,
@@ -46,17 +46,20 @@
     },
     computed: {
       filteredProduits() {
-        if(this.nombreProduits === 3){
+        if(this.nombreProduits == 3){
           return this.Produits.slice(0,3);
         }
-        else if(this.categories === 'All'){
-          return this.Produits;
-        }
         else{
-          return this.Produits.filter(produit => produit.category === this.categories)
+          return this.Produits;
         }
       }
     }
   };
   </script>
+<style>
+.titre{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: bold;
+}
+</style>
   
