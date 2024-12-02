@@ -34,37 +34,49 @@
                         {{ product.description }}
                     </p>
                     <p class="mt-6 text-2xl font-semibold text-green-600">{{ product.prix }} TND</p>
-                    <input
-                        class="rounded-md px-3 py-3 bg-gray-200 w-16"
-                        min="0"
-                        type="number"
-                    />
+
                     <div class="my-4">
-                        <p v-if="product.quantité > 10" class=" text-green">En Stock</p>
+                        <p v-if="product.quantité > 10" class=" text-green">In Stock</p>
                         <p v-else-if="product.quantité > 0 && product.quantité <= 10" class="text-yellow-500">
-                            Presque épuisé
+                            Almost out of stock
                         </p>
-                        <p v-else class="text-red-500">En Rupture de Stock</p>
+                        <p v-else class="text-red-500">Out of stock</p>
                     </div>
                     <!-- Boutons -->
                     <div class="mt-6 flex items-center gap-4">
-                        <button
-                            class="rounded-md bg-white px-6 py-3 text-black text-sm font-medium hover:bg-green-700 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" :disabled="!enStock"
-                        >
-                            buy now
-                        </button>
+                        <RouterLink :to="{ name: 'Panier', params: { id: product.id } }" >
+                            <button
+                                class="rounded-md bg-white px-6 py-3 text-black text-sm font-medium hover:bg-green-700 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" :disabled="!enStock"
+                                @click="addProductToCart(product.id)">Buy now
+                            </button>
+                        </RouterLink>
+                        
                         <button
                             class="rounded-md bg-gray-200 px-6 py-3 text-gray-700 text-sm font-medium hover:bg-gray-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" :disabled="!enStock"
                         >
-                            add to cart
+                            Add to cart
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <p class="mt-4 text-lg text-gray-700">
-                        {{ product.astuce }}
-                    </p>
+        <div class="mt-4 flex items-center border-t border-gray-200 pt-4">
+    <div class=" w-2/4 flex justify-center">
+      <img 
+        src="@/assets/images/farmer.jpg" 
+        alt="Image de plante" 
+        class=" w-80 h-60 object-contain rounded-m"
+      />
+    </div>
+
+    <div class="w-3/4 px-4">
+        <h2 class="text-2xl font-bold text-green">Astuce</h2>
+      <p class="text-m text-black">
+        {{ product.astuce }}
+      </p>
+    </div>
+  </div>
+
     </section>
     <div v-else class="text-center py-12">
         <p class="text-lg text-gray-700">Chargement...</p>
@@ -79,6 +91,7 @@ export default {
     data() {
         return {
             product: null,
+            panier: [],
         };
     },
     computed: {
@@ -101,6 +114,10 @@ export default {
                 this.product.indice = indice;
             }
         },
+        addProductToCart(id) {
+            this.panier.push(id);
+        }
+
     },
     created() {
         ProduitService.getProduit(this.id)
@@ -116,5 +133,4 @@ export default {
 </script>
 
 <style>
-/* Aucun style personnalisé nécessaire avec Tailwind CSS */
 </style>

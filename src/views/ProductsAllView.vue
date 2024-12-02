@@ -1,5 +1,6 @@
 <template>
-  <div class="about">
+  <div>
+    <img :src="require('@/assets/images/couverture1.jpg')" class=" w-screen h-72">
     <ListeProducts :categories="All"/>
   </div>
 </template>

@@ -33,6 +33,20 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/ProductDetailView.vue"),
   },
+  {
+    path: "/panier/:id",
+    name: "Panier",
+    props: true,
+
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/PanierProductsView.vue"),
+  },
+  {
+    path: '/confirmation',
+    name: "Confirmation",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/ConfirmationView.vue"),
+  },
   
   
   
@@ -42,5 +56,4 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
-
 export default router;
