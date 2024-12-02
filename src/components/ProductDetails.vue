@@ -84,10 +84,16 @@ export default {
     computed: {
         productImage() {
             if (this.product) {
-                return require(`@/assets/images/${this.product.images[this.product.indice]}`);
+                return require(`@/assets/images/${this.product.images[this.product.indice]}`) || '';
             }
             return "";
         },
+        enStock() {
+            if (!this.product || this.product.quantité <= 0) {
+                return false;
+            }
+            return true;
+        }
     },
     methods: {
         addToCart() {
