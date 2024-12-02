@@ -51,17 +51,20 @@
                         <button
                             class="rounded-md bg-white px-6 py-3 text-black text-sm font-medium hover:bg-green-700 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                         >
-                            Acheter maintenant
+                            buy now
                         </button>
                         <button
                             class="rounded-md bg-gray-200 px-6 py-3 text-gray-700 text-sm font-medium hover:bg-gray-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
                         >
-                            Ajouter au panier
+                            add to cart
                         </button>
                     </div>
                 </div>
             </div>
         </div>
+        <p class="mt-4 text-lg text-gray-700">
+                        {{ product.astuce }}
+                    </p>
     </section>
     <div v-else class="text-center py-12">
         <p class="text-lg text-gray-700">Chargement...</p>

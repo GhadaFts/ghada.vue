@@ -1,11 +1,24 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
+
 const routes = [
   {
     path: "/",
     name: "home",
     component: HomeView,
+  },
+  {
+    path: '/team',
+    name: "team",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/TeamView.vue"),
+  },
+  {
+    path: '/contact',
+    name: "contact",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/ContactView.vue"),
   },
   {
     path: "/products",
@@ -19,7 +32,9 @@ const routes = [
     props: true,
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/ProductDetailView.vue"),
-  }
+  },
+  
+  
   
 ];
 
