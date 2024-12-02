@@ -57,7 +57,7 @@
             <span class="font-semibold text-gray-900">{{ total }} TND</span>
         </div>
         </div>
- 
+
             <div class="mt-8 flex justify-between items-center">
                 <router-link to="/products" class="text-sm text-green hover:underline">
                     Back to Product
@@ -69,7 +69,6 @@
             </div>
         </section>
 </template>
-  
 <script>
     import ProduitService from "@/services/ProduitService.js";
 
