@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-10 my-20">
+    <div class="mx-10 my-24">
       <h1 class="text-5xl text-center my-8 text-green">{{ msg }}</h1>
       <div class="grid grid-cols-1 gap-4  lg:grid-cols-3 lg:gap-8">
         <CardsProduits :produits="filteredProduits"/>
@@ -56,4 +56,10 @@
     }
   };
   </script>
+<style>
+.titre{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: bold;
+}
+</style>
   

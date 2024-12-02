@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <img :src="require('@/assets/images/couverture1.jpg')" class=" w-screen h-72">
+  <div class="about">
     <ListeProducts :categories="All"/>
   </div>
 </template>
@@ -18,3 +17,8 @@
   };
 
 </script>
+<style>
+.image{
+  width: 100%;
+}
+</style>

@@ -77,6 +77,3 @@ export default {
 };
 </script>
 
-<style scoped>
-/* Add custom styles here if needed */
-</style>
