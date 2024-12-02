@@ -49,12 +49,12 @@
                     <!-- Boutons -->
                     <div class="mt-6 flex items-center gap-4">
                         <button
-                            class="rounded-md bg-white px-6 py-3 text-black text-sm font-medium hover:bg-green-700 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                            class="rounded-md bg-white px-6 py-3 text-black text-sm font-medium hover:bg-green-700 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" :disabled="!enStock"
                         >
                             Acheter maintenant
                         </button>
                         <button
-                            class="rounded-md bg-gray-200 px-6 py-3 text-gray-700 text-sm font-medium hover:bg-gray-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                            class="rounded-md bg-gray-200 px-6 py-3 text-gray-700 text-sm font-medium hover:bg-gray-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" :disabled="!enStock"
                         >
                             Ajouter au panier
                         </button>
@@ -81,10 +81,16 @@ export default {
     computed: {
         productImage() {
             if (this.product) {
-                return require(`@/assets/images/${this.product.images[this.product.indice]}`);
+                return require(`@/assets/images/${this.product.images[this.product.indice]}`) || '';
             }
             return "";
         },
+        enStock() {
+            if (!this.product || this.product.quantité <= 0) {
+                return false;
+            }
+            return true;
+        }
     },
     methods: {
         changeImage(indice) {
