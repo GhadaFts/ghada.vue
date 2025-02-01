@@ -1,5 +1,4 @@
 <template>
-  <img src="../assets/images/pp1.png" class="image" >
   <div class="about">
     <ListeProducts :categories="All"/>
   </div>

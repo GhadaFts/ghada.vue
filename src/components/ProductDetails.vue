@@ -26,13 +26,17 @@
                         {{ product.description }}
                     </p>
                     <p class="mt-6 text-2xl font-semibold text-green-600">{{ product.prix }} TND</p>
-                    <input class="rounded-md px-3 py-3 bg-gray-200 w-16" min="0" type="number" />
+                    <input
+                        class="rounded-md px-3 py-3 bg-gray-200 w-16"
+                        min="0"
+                        type="number"
+                    />
                     <div class="my-4">
-                        <p v-if="product.quantité > 10" class=" text-green">En Stock</p>
+                        <p v-if="product.quantité > 10" class=" text-green">In Stock</p>
                         <p v-else-if="product.quantité > 0 && product.quantité <= 10" class="text-yellow-500">
-                            Presque épuisé
+                            Almost out of stock
                         </p>
-                        <p v-else class="text-red-500">En Rupture de Stock</p>
+                        <p v-else class="text-red-500">Out of stock</p>
                     </div>
                     <!-- Boutons -->
                     <div class="mt-6 flex items-center gap-4">
@@ -50,8 +54,8 @@
             </div>
         </div>
         <p class="mt-4 text-lg text-gray-700">
-            {{ product.astuce }}
-        </p>
+                        {{ product.astuce }}
+                    </p>
     </section>
     <div v-else class="text-center py-12">
         <p class="text-lg text-gray-700">Chargement...</p>
@@ -77,8 +81,6 @@ export default {
     data() {
         return {
             product: null,
-            showModal: false,  // Contrôle l'affichage de la modale
-
         };
     },
     computed: {
@@ -105,9 +107,6 @@ export default {
                 this.product.indice = indice;
             }
         },
-        closeModal() {
-            this.showModal = false;
-        }
     },
     created() {
         ProduitService.getProduit(this.id)
@@ -123,5 +122,4 @@ export default {
 </script>
 
 <style>
-/* Aucun style personnalisé nécessaire avec Tailwind CSS */
 </style>

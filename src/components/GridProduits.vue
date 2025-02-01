@@ -1,7 +1,6 @@
 <template>
     <div class="mx-10 my-24">
-      <h1 class="titre text-5xl text-center my-8 text-green">{{ msg }}</h1>
-      <hr>
+      <h1 class="text-5xl text-center my-8 text-green">{{ msg }}</h1>
       <div class="grid grid-cols-1 gap-4  lg:grid-cols-3 lg:gap-8">
         <CardsProduits :produits="filteredProduits"/>
       </div>
@@ -19,7 +18,7 @@
     props: {
       msg: {
         type: String,
-        default: 'Nos Produits'
+        default: 'Our Products'
       },
       nombreProduits:{
         type: Number,
@@ -47,14 +46,11 @@
     },
     computed: {
       filteredProduits() {
-        if(this.nombreProduits === 3){
+        if(this.nombreProduits == 3){
           return this.Produits.slice(0,3);
         }
-        else if(this.categories === 'All'){
-          return this.Produits;
-        }
         else{
-          return this.Produits.filter(produit => produit.category === this.categories)
+          return this.Produits;
         }
       }
     }

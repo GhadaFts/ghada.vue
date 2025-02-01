@@ -14,5 +14,9 @@ export default {
     },
     getProduit(id) {
         return apiClient.get('/Produits/' + id);
+    },
+    updateProduit(id, produit) {
+        return apiClient.put('/Produits/' + id, produit);
     }
+
 }

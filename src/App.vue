@@ -28,6 +28,7 @@
                 <router-link to="/contact"
                   class="items text-gray-500 hover:text-green transition-all">Contact</router-link>
               </li>
+
             </ul>
 
           </nav>
